@@ -47,7 +47,16 @@
             //Size of the legend
             var legendRectSize = 18;                                  
             var legendSpacing = 4; 
-
+            
+            svg.append("text")
+                .attr("x", (width / 2))             
+                .attr("y", 0 - (margin.top / 2))
+                .attr("text-anchor", "middle")  
+                .style("font-size", "16px") 
+                .attr("font-weight", "bold")
+                .style("text-decoration", "underline")  
+                .text("Bar chart of year and target type by weapon type");
+            
             // Add X axis
             var x = d3.scaleBand()
                       .domain(groups)
